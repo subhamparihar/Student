@@ -1,0 +1,94 @@
+/* Error Page Styles */
+.error-page {
+  background: linear-gradient(135deg, var(--danger-color), #f97316);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.error-container {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  padding: 3rem;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: var(--shadow-lg);
+}
+
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.error-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.error-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.error-container p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.error-details {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--danger-color);
+}
+
+.error-details p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.error-actions .btn {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .error-page {
+    padding: 1rem;
+  }
+
+  .error-container {
+    padding: 1.5rem;
+  }
+
+  .error-icon {
+    font-size: 3rem;
+  }
+
+  .error-container h1,
+  .error-container h2 {
+    font-size: 1.25rem;
+  }
+
+  .error-actions {
+    flex-direction: column;
+  }
+
+  .error-actions .btn {
+    width: 100%;
+  }
+}

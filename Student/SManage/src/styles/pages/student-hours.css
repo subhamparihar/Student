@@ -1,0 +1,207 @@
+/* Student Hours Page Styles */
+.student-hours-page {
+  padding: 2rem;
+}
+
+.student-hours-page .page-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.student-hours-page h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Hours Summary */
+.hours-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition);
+}
+
+.summary-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.summary-icon {
+  font-size: 2rem;
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+.summary-content {
+  flex-grow: 1;
+}
+
+.summary-label {
+  font-size: 0.8875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.summary-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Action Bar */
+.action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.action-bar .btn-lg {
+  margin: 0;
+}
+
+.warning-text {
+  color: var(--warning-color);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Hours Logs Section */
+.hours-logs-section {
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+}
+
+.hours-logs-section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.hours-logs-table {
+  overflow-x: auto;
+}
+
+.hours-logs-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-logs-table thead {
+  background-color: var(--bg-tertiary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.hours-logs-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hours-logs-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.hours-logs-table tbody tr:hover {
+  background-color: var(--bg-primary);
+}
+
+.hours-cell {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Hours Form */
+.hours-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hours-form .form-textarea {
+  min-height: 100px;
+}
+
+.info-box {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--success-color);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.info-box p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.info-box p:first-child {
+  margin-top: 0;
+}
+
+.info-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hours-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .student-hours-page {
+    padding: 1rem;
+  }
+
+  .hours-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .action-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .action-bar .btn-lg {
+    width: 100%;
+  }
+
+  .hours-logs-section {
+    padding: 1.5rem;
+  }
+
+  .hours-logs-table {
+    font-size: 0.85rem;
+  }
+
+  .hours-logs-table th,
+  .hours-logs-table td {
+    padding: 0.75rem;
+  }
+
+  .hours-logs-table th {
+    font-size: 0.8rem;
+  }
+}

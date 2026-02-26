@@ -1,0 +1,26 @@
+/* Global Styles */
+@import './global.css';
+
+/* Component Styles */
+@import './styles/navbar.css';
+@import './styles/modal.css';
+@import './styles/card.css';
+@import './styles/stat-card.css';
+
+/* Layout Styles */
+@import './styles/layouts.css';
+
+/* Page Styles */
+@import './styles/pages/home.css';
+@import './styles/pages/jobs.css';
+@import './styles/pages/job-details.css';
+@import './styles/pages/auth.css';
+@import './styles/pages/error.css';
+@import './styles/pages/dashboard.css';
+@import './styles/pages/admin-jobs.css';
+@import './styles/pages/admin-applications.css';
+@import './styles/pages/student-applications.css';
+@import './styles/pages/student-hours.css';
+
+/* App Styles */
+@import './App.css';

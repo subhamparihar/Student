@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "workspaces": [
+    "SManage"
+  ],
+  "scripts": {
+    "dev": "npm --workspace=SManage run dev",
+    "start": "npm --workspace=SManage run dev"
+  }
+}

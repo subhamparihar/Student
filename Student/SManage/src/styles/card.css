@@ -1,0 +1,157 @@
+/* Card Styles */
+.card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.card.closed {
+  opacity: 0.7;
+  background-color: var(--bg-secondary);
+}
+
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.card-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Job Card */
+.job-card .job-info {
+  margin-bottom: 1.5rem;
+}
+
+.job-info .info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.job-info .label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.job-info .value {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.job-info .salary {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.job-card .description {
+  color: var(--text-secondary);
+  margin: 1rem 0 0 0;
+}
+
+.card-footer .actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.applications-count {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+/* Application Card */
+.application-card .feedback-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.feedback-text {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin: 0.5rem 0 0 0;
+}
+
+.application-card.status-pending {
+  border-left: 4px solid var(--warning-color);
+}
+
+.application-card.status-approved {
+  border-left: 4px solid var(--success-color);
+}
+
+.application-card.status-rejected {
+  border-left: 4px solid var(--danger-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    border-radius: 0.5rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-info .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card-footer .actions {
+    flex-direction: column;
+  }
+
+  .btn-sm {
+    width: 100%;
+  }
+}

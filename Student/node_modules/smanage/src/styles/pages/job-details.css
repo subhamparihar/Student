@@ -1,0 +1,245 @@
+/* Job Details Page Styles */
+.job-details-page {
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.back-link:hover {
+  gap: 1rem;
+}
+
+.job-details-article {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.job-header {
+  padding: 2.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--purple-color));
+  color: white;
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.job-title-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.job-title-section h1 {
+  color: white;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.job-department {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin: 0;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  padding: 2.5rem;
+}
+
+/* Main Content */
+.details-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.description-section h2,
+.requirements-section h2,
+.responsibilities-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.requirements-list,
+.responsibilities-list {
+  list-style: none;
+  padding: 0;
+}
+
+.requirements-list li,
+.responsibilities-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.requirements-list li:last-child,
+.responsibilities-list li:last-child {
+  border-bottom: none;
+}
+
+.requirements-list .icon {
+  font-size: 1.25rem;
+  min-width: 1.5rem;
+}
+
+.requirements-list strong {
+  color: var(--text-primary);
+}
+
+.closed-notice {
+  background-color: #fee2e2;
+  border-left: 4px solid var(--danger-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+}
+
+.closed-notice p {
+  color: #7f1d1d;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Sidebar */
+.details-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-card {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.info-card h3 {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.compensation-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.comp-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comp-row:last-child {
+  border-bottom: none;
+}
+
+.comp-row span {
+  color: var(--text-secondary);
+}
+
+.comp-row strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.apply-section {
+  background-color: #eff6ff;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--primary-color);
+}
+
+.apply-section .btn-block {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.auth-notice {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dept-name {
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.error-state {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .details-sidebar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .job-header {
+    padding: 1.5rem;
+  }
+
+  .job-title-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .job-title-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .details-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .requirements-list li,
+  .responsibilities-list li {
+    flex-direction: column;
+  }
+
+  .requirements-list .icon {
+    font-size: 1rem;
+  }
+}
